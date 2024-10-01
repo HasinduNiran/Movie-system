@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    background-image: url('../image/bg6.jpg');
+    background-size: cover; 
+}
+
+.yx-form {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent white */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 120px;
+  
+}
+
+.yx-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.yx-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.yx-form input[type="text"],
+.yx-form input[type="email"],
+.yx-form input[type="date"],
+.yx-form input[type="submit"],
+.yx-form input[type="number"],
+.yx-form select {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.yx-form input[type="submit"] {
+    background-color: #3c3cc4;
+    color: white;
+    cursor: pointer;
+}
+
+.yx-form input[type="submit"]:hover {
+    background-color: #020253;
+}
+
+.yx-form select {
+    width: 100%;
+}
+
+.yx-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #3c3cc4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.yx-form button[type="submit"]:hover {
+    background-color: #45a049;
+}

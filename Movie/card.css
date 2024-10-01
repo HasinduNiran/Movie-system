@@ -1,0 +1,106 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+   
+    background-image: url('bg6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Header Styles */
+.header {
+    background-color: #858abd;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Container Styles */
+.container {
+    width: 90%;
+    margin: 120px auto;
+    margin-left: 100px;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Distribute items evenly with space between */
+    align-items: center; /* Center items vertically */  
+}
+
+/* Hotel Card Styles */
+.hotel {
+    width: 50%;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    flex: 0 0 calc(50% - 20px); /* Adjust width to fit two cards per row with margin */
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+    align-self: center; /* Center hotel card vertically */
+}
+.hotel h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hotel img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 50%;
+    height: 70%;
+    border-radius: 5px;
+}
+
+.hotel p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: center; /* Align text center horizontally */
+}
+
+.hotel button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.hotel button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}

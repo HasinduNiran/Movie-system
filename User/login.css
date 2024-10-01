@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6; /* Background color for the entire page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.fromebox {
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the form container */
+    text-align: center;
+    width: 20%;
+}
+
+.login {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.form1 {
+    margin-top: 20px;
+}
+
+.input {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.errorbox {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.p1 {
+    margin-top: 20px;
+}
+
+.click {
+    color: blue;
+    text-decoration: none;
+}
+
+.click:hover {
+    text-decoration: underline;
+}
