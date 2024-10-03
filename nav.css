@@ -9,9 +9,10 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh; /* Decreased min-height */
-  background-color: #d0ebf9;
+  background-color:hsl(207, 19%, 11%);
   position: fixed;
   width: 100%;
+  margin-left: -2%;
   top: 0;
 }
 

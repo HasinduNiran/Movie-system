@@ -25,15 +25,16 @@
 <body>
 <nav>
       <div class="logo">
-        <h3><a href="" class="logo-name">Movie Booking</a></h3>
+        <h3><a href="" class="logo-name">FamilyCinama</a></h3>
       </div>
 
       <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../Movie/movie.php">Hotels</a></li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="./Movie/movie.php">Movies</a></li>
+      
         <!-- <li><a href="../package/">Package</a></li>
         <li><a href="#">ContactUs</a></li> -->
-        <li><a href="../Contact_us/contactUs.php">ContactUs</a></li>
+        <li><a href="./contact_us/contactUs.php">ContactUs</a></li>
       </ul>
     
     </nav>

@@ -45,26 +45,26 @@ $row = mysqli_fetch_assoc($result);
 </head>
 <body>
     <div class="container">
-        <div class="users">
-            <div class='user'>
-                <h2>User profile</h2>
-                <!-- Display user details -->
-                <img src="<?php echo htmlspecialchars($row['photo']); ?>" alt="user Image" width="100">
-                <p><strong>First Name:</strong> <?php echo htmlspecialchars($row['firstname']); ?></p>
-                <p><strong>Last Name:</strong> <?php echo htmlspecialchars($row['lastname']); ?></p>
-                <p><strong>Email:</strong> <?php echo htmlspecialchars($row['email']); ?></p>
-                <?php 
-                // Check if telephone field exists and is not empty
-                if(isset($row['telphone']) && !empty($row['telphone'])) {
-                    echo "<p><strong>Telphone:</strong> " . htmlspecialchars($row['telphone']) . "</p>";
-                } else {
-                    echo "<p><strong>Telphone:</strong> Not Available</p>";
-                }
-                ?>
-                <p><strong>Password:</strong> <?php echo htmlspecialchars($row['password']); ?></p>
+        <div class="user">
+            <h2>User Profile</h2>
+            <?php
+          
+            ?>
+            <img src="<?php echo htmlspecialchars($row['photo']); ?>" alt="User Image" width="100">
+            <p><strong>First Name:</strong> <?php echo htmlspecialchars($row['firstname']); ?></p>
+            <p><strong>Last Name:</strong> <?php echo htmlspecialchars($row['lastname']); ?></p>
+            <p><strong>Email:</strong> <?php echo htmlspecialchars($row['email']); ?></p>
+            <?php 
+            if(isset($row['telphone']) && !empty($row['telphone'])) {
+                echo "<p><strong>Telephone:</strong> " . htmlspecialchars($row['telphone']) . "</p>";
+            } else {
+                echo "<p><strong>Telephone:</strong> Not Available</p>";
+            }
+            ?>
+            <p><strong>Password:</strong> <?php echo htmlspecialchars($row['password']); ?></p>
 
-                <!-- Edit and delete buttons -->
-                <a href='update_user.php?id=<?php echo $row['id']; ?>'><button>Edit</button></a>
+            <div class="buttons">
+                <a href='update_user.php?id=<?php echo $row['id']; ?>'><button class="edit-btn">Edit</button></a>
                 <a href='delete_user.php?id=<?php echo $row['id']; ?>'><button class="delete-btn">Delete</button></a>
             </div>
         </div>
