@@ -60,48 +60,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
     <title>Add Movie</title>
     <style>
-       /* CSS for Update Movie Form */
 .container {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
+    -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
-    background-image: url('../image/bg6.jpg');
+    background-image: url('../image/form1.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     font-family: Arial, sans-serif;
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: white;
     margin-top: 90px; 
 }
 
 form {
     padding: 20px;
-    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+
+    
 }
 
 label {
     font-weight: bold;
     margin-bottom: 10px;
     display: block;
-    color: #333;
+    color: black;
 }
 
 input[type="text"],
@@ -121,6 +123,8 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    color: #fff;
+
 }
 
 button[type="submit"] {

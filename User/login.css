@@ -1,7 +1,12 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f3f4f6; /* Background color for the entire page */
+    font-family: Arial, sans-serif;
+   
+    background-image: url('../image/hero-bg.jpg'); /* Replace 'bg6.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +20,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the form container */
     text-align: center;
     width: 20%;
+    margin-right: 45%;
+    margin-top: 10%;
 }
 
 .login {
@@ -24,6 +31,7 @@ body {
 
 .form1 {
     margin-top: 20px;
+    
 }
 
 .input {

@@ -6,13 +6,15 @@
 }
 
 /* Body styling */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    background-image: url('bg6.jpg'); /* Replace 'bg6.jpg' with your image path */
+   
+    background-image: url('../image/hero-bg.jpg'); /* Replace 'bg6.jpg' with your image path */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+
 }
 
 /* Container styling */

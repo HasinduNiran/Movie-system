@@ -102,108 +102,175 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Update Movie</title>
     <style>
-        /* CSS for Update Movie Form */
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #f4f7f9;
+            --text-color: #333;
+            --input-bg: #fff;
+            --input-border: #ddd;
+            --input-focus: #3498db;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
         }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('../image/form1.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+            color: var(--text-color);
+            line-height: 1.6;
             padding: 20px;
-            background-image: url('../image/bg6.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
+            margin-top:7%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
         }
 
         h1 {
             text-align: center;
-            color: #333;
-            margin-top: 90px; 
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            font-size: 2.5em;
         }
 
         form {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            display: grid;
+            gap: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
         }
 
         label {
-            font-weight: bold;
-            margin-bottom: 10px;
-            display: block;
-            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--secondary-color);
         }
 
         input[type="text"],
         input[type="number"],
         textarea {
-            width: calc(100% - 22px);
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--input-border);
+            border-radius: 4px;
             font-size: 16px;
+            transition: var(--transition);
         }
 
-        img {
-            display: block;
-            margin-bottom: 10px;
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--input-focus);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .file-input {
+            margin-top: 10px;
+        }
+
+        .current-image {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .current-image img {
             max-width: 100%;
             height: auto;
-            border-radius: 5px;
+            border-radius: 4px;
+            box-shadow: var(--shadow);
         }
 
-        button[type="submit"] {
-            background-color: #007bff;
+        button {
+            background-color: var(--primary-color);
             color: #fff;
             border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
+            padding: 14px 20px;
             font-size: 18px;
+            border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: var(--transition);
+            width: 100%;
+            font-weight: 600;
         }
 
-        button[type="submit"]:hover {
-            background-color: #0056b3;
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
 
-<h1>Update Movie</h1>
-
 <div class="container">
-    <form action="update_movie.php?id=<?php echo $movie_id; ?>" method="post" enctype="multipart/form-data">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" value="<?php echo htmlspecialchars($movie['title']); ?>" required>
+        <h1>Update Movie</h1>
+        <form action="update_movie.php?id=<?php echo $movie_id; ?>" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" value="<?php echo htmlspecialchars($movie['title']); ?>" required>
+            </div>
 
-        <label for="price">Price:</label>
-        <input type="number" id="price" name="price" value="<?php echo $movie['price']; ?>" required>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" id="price" name="price" value="<?php echo $movie['price']; ?>" required>
+            </div>
 
-        <label for="duration">Duration:</label>
-        <input type="text" id="duration" name="duration" value="<?php echo $movie['duration']; ?>" required>
+            <div class="form-group">
+                <label for="duration">Duration</label>
+                <input type="text" id="duration" name="duration" value="<?php echo $movie['duration']; ?>" required>
+            </div>
 
-        <label for="category">Category:</label>
-        <input type="text" id="category" name="category" value="<?php echo $movie['category']; ?>" required>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input type="text" id="category" name="category" value="<?php echo $movie['category']; ?>" required>
+            </div>
 
-        <label for="description">Description:</label>
-        <textarea id="description" name="description" required><?php echo htmlspecialchars($movie['description']); ?></textarea>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required><?php echo htmlspecialchars($movie['description']); ?></textarea>
+            </div>
 
-        <label for="photo">Movie photo (leave blank to keep current image):</label>
-        <input type="file" id="photo" name="photo" accept="image/*"><br><br>
-        <img src="<?php echo $movie['photo']; ?>" alt="Current Movie photo"><br>
+            <div class="form-group">
+                <label for="photo">Movie Photo</label>
+                <input type="file" id="photo" name="photo" accept="image/*" class="file-input">
+                <p class="file-hint">Leave blank to keep the current image</p>
+            </div>
 
-        <button type="submit">Update Movie</button>
-    </form>
-</div>
+            <div class="current-image">
+                <img src="<?php echo $movie['photo']; ?>" alt="Current Movie Photo">
+            </div>
 
+            <button type="submit">Update Movie</button>
+        </form>
+    </div>
 </body>
 </html>
