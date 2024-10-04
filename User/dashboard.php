@@ -90,6 +90,12 @@ mysqli_close($conn);
                         <span class="item">contact_Us</span>
                     </a>
                 </li>
+                <li>
+                    <a href="../Contact_us/viewc.php">
+                        <span class="icon"><i class="fas fa-trash"></i></span>
+                        <span class="item">View Messages</span>
+                    </a>
+                </li>
 
                 <!-- <li>
                     <a href="profile/view.php">

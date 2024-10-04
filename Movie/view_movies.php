@@ -33,7 +33,9 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--background-color);
+            background-image: url('../image/form1.jpg');
+            background-size: cover;
+            background-repeat: repeat;
             color: var(--text-color);
             line-height: 1.6;
             padding: 20px;
@@ -55,6 +57,7 @@
             box-shadow: var(--shadow);
             overflow: hidden;
             transition: var(--transition);
+            margin-top: 10%;
         }
 
         .movie:hover {

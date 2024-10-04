@@ -33,6 +33,7 @@ body {
 .yx-form h2 {
     margin-bottom: 20px;
     text-align: center;
+    color: white;
 }
 
 .yx-form label {
@@ -74,4 +75,9 @@ body {
 }
 .yx-form h2 {
     text-align: center;
+    color: white;
+}
+h2{
+    color: white;
+    
 }

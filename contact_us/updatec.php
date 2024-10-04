@@ -86,7 +86,7 @@
         .form-group label {
             position: absolute;
             left: 15px;
-            top: 0;
+            margin-top: -5%;
             font-size: 0.8rem;
             color: var(--primary-color);
             background-color: var(--input-background);

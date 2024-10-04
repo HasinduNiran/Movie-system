@@ -72,7 +72,7 @@ if (isset($_POST['submit'])) {
 
     if ($result) {
         echo "Booking added successfully";
-        header('Location: view_booking.php');
+        header('Location: ../index.html');
         exit;
     } else {
         echo "Error adding booking: " . mysqli_error($conn);

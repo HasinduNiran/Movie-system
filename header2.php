@@ -29,12 +29,12 @@
       </div>
 
       <ul class="nav-links">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="./Movie/movie.php">Movies</a></li>
+        <li><a href="/Movie-system/index.html">Home</a></li>
+        <li><a href="/Movie-system/Movie/movie.php">Movies</a></li>
       
         <!-- <li><a href="../package/">Package</a></li>
         <li><a href="#">ContactUs</a></li> -->
-        <li><a href="./contact_us/contactUs.php">ContactUs</a></li>
+        <li><a href="/Movie-system/contact_us/contactUs.php">ContactUs</a></li>
       </ul>
     
     </nav>

@@ -1,15 +1,6 @@
 <?php include '../header2.php';
 
 
-session_start();
-
-// Check if the user is logged in
-if (!isset($_SESSION['email'])) {
-    echo "You must be logged in to view bookings.";
-    exit; // Stop further script execution if not logged in
-}
-
-$email = $_SESSION['email'];
 ?>
 
 <!DOCTYPE html>
@@ -153,14 +144,14 @@ $email = $_SESSION['email'];
                 include '../dbh.php';
 
                 // Fetch data from the database
-                // $query = "SELECT * FROM contact WHERE email = ?";
-                // $result = mysqli_query($conn, $query);
+                $query = "SELECT * FROM contact";
+                $result = mysqli_query($conn, $query);
 
                 // Use prepared statements for security
-                $stmt = $conn->prepare("SELECT * FROM contact WHERE email = ?");
-                $stmt->bind_param("s", $email);
-                $stmt->execute();
-                $result = $stmt->get_result();
+                // $stmt = $conn->prepare("SELECT * FROM contact WHERE email = ?");
+                // $stmt->bind_param("s", $email);
+                // $stmt->execute();
+                // $result = $stmt->get_result();
 
 
                 while ($row = mysqli_fetch_assoc($result)) {

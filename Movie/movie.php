@@ -15,18 +15,17 @@
 <head>
     <meta charset="UTF-8">
     <title>View Movies</title>
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
-    <link rel="stylesheet" href="card.css">
+    
     <style>
         body {
+            background-image: url('../image/form1.jpg');
+            background-size: cover;
+            background-repeat: repeat;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             margin: 0;
             padding: 20px;
             margin-top:7%;
-            background-image: url('/image/form1.jpg');
-              background-size: cover;
-              background-repeat: repeat;
+            
         }
         .container {
             max-width: 1200px;
@@ -36,11 +35,12 @@
             gap: 20px;
         }
         .movie {
-            background-color: #fff;
+            background-color: hsl(228, 13%, 15%);
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s ease;
+            color: white;
         }
         .movie:hover {
             transform: translateY(-5px);
@@ -56,7 +56,8 @@
         .movie h2 {
             margin: 0 0 10px;
             font-size: 1.2em;
-            color: #333;
+            color: white;
+            
         }
         .movie p {
             margin: 5px 0;
@@ -64,7 +65,7 @@
             color: #666;
         }
         .movie strong {
-            color: #333;
+            color: white;
         }
         .book-btn {
             display: block;

@@ -45,7 +45,7 @@
                 </li>
 
                 <li>
-                    <a href="../Movie-system/Contact_us/viewc.php">
+                    <a href="../Movie-system/Contact_us/viewcAll.php">
                         <span class="icon"><i class="fas fa-trash"></i></span>
                         <span class="item">Mesages</span>
                     </a>
