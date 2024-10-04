@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3309
--- Generation Time: Oct 01, 2024 at 06:37 PM
+-- Host: 127.0.0.1:3308
+-- Generation Time: Oct 04, 2024 at 03:43 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,7 +42,13 @@ CREATE TABLE `booking` (
 --
 
 INSERT INTO `booking` (`id`, `name`, `email`, `phone`, `movie`, `show_date`, `tickets`) VALUES
-(2, 'bgspa dissanayake', 'hasindu612@gmail.com', '0775120692', 'hopp', '2024-10-01', 5);
+(2, 'bgspa dissanayake', 'hasindu612@gmail.com', '0775120692', 'hopp', '2024-10-01', 5),
+(3, 'Hasindu 23 Niran', 'hasindu612@gmail.com', '0712356456', 'hj', '2024-10-04', 5),
+(4, 'Hasindu 45', 'hasindu612@gmail.com', '0712356456', 'hj', '2024-10-04', 5),
+(5, 'lasal', 'anupamapasan01@gmail.com', '0713749465', 'hj', '2024-10-04', 5),
+(6, 'lasal', 'anupamapasan01@gmail.com', '0713749465', 'hj', '2024-10-04', 5),
+(7, 'lasal', 'anupamapasan01@gmail.com', '0713749465', 'hj', '2024-10-04', 5),
+(8, 'lasal', 'yenura02@gmail.com', '0123456789', 'hj', '2024-10-04', 4);
 
 -- --------------------------------------------------------
 
@@ -63,7 +69,9 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `name`, `email`, `movie`, `message`) VALUES
-(3, 'John Doe', 'john.doe@example.com', 'hj', 'Message hi has');
+(3, 'John Doe', 'john.doe@example.com', 'hj', 'Message hi hasssss'),
+(4, 'lasal', 'yenura02@gmail.com', 'hj', 'j'),
+(5, 'lasaln kn', 'l@g.com', 'hj', 'jjl');
 
 -- --------------------------------------------------------
 
@@ -86,7 +94,7 @@ CREATE TABLE `movies` (
 --
 
 INSERT INTO `movies` (`id`, `title`, `price`, `duration`, `category`, `description`, `photo`) VALUES
-(4, 'hj', 250, '3j', 'Tamil', 'moadkkol', 0x75706c6f6164732f363666626463653033646565305f576861747341707020496d61676520323032342d30392d32342061742031312e32362e31385f33393032316336302e6a7067);
+(4, 'Hello', 250, '3j', 'Tamil', 'hi', 0x75706c6f6164732f363666626463653033646565305f576861747341707020496d61676520323032342d30392d32342061742031312e32362e31385f33393032316336302e6a7067);
 
 -- --------------------------------------------------------
 
@@ -100,15 +108,18 @@ CREATE TABLE `user` (
   `lastname` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(20) NOT NULL,
-  `photo` longblob NOT NULL
+  `photo` longblob NOT NULL,
+  `telphone` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `firstname`, `lastname`, `email`, `password`, `photo`) VALUES
-(2, 'Hasindu', 'Niran l', 'hasindu612@gmail.com', '1234', 0x75706c6f6164732f4f4950202831292e6a706567);
+INSERT INTO `user` (`id`, `firstname`, `lastname`, `email`, `password`, `photo`, `telphone`) VALUES
+(2, 'Hasindu', 'Niran l', 'hasindu612@gmail.com', '1234', 0x75706c6f6164732f4f4950202831292e6a706567, ''),
+(3, 'Yenuraaaaa', 'Karunanayaka', 'yenura02@gmail.com', '1234', 0x75706c6f6164732f363666663930323562636636665f57494e5f32303234303232375f31335f35395f30365f50726f2e6a7067, '0789852068'),
+(4, 'Sahan', 'Weerakkodi', 's@gmail.com', '12345678', 0x75706c6f6164732f363666666438316138313764665f547275652b536572766963652b4d616e61676572732b6172652b6f6e2b7468652b46726f6e742b4c696e652e6a7067, '0712345678');
 
 --
 -- Indexes for dumped tables
@@ -118,6 +129,12 @@ INSERT INTO `user` (`id`, `firstname`, `lastname`, `email`, `password`, `photo`)
 -- Indexes for table `booking`
 --
 ALTER TABLE `booking`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -140,7 +157,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `movies`
@@ -152,7 +175,7 @@ ALTER TABLE `movies`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
